@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attendance</title>
+  <link rel="stylesheet" href="/attendance/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+
+
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
+<body>
+  <div class="pre-loader">
+    <div id="loader-image-wrapper">
+      <img src="/assets/images/anim/loader2.svg">
+    </div>
+  </div>
+  <header>
+    <img class="logo" src="/assets/images/college.png" alt="logo">
+    <nav>
+      <ul class="nav__links">
+        <li><a href="/dashboard/dashboard.html">Dashboard</a></li>
+        <li><a href="/profile/profile.html">My Profile</a></li>
+        <li><a href="/attendance/attendance.html">My Class Attendance</a></li>
+        <li><a href="/about/about.html">About the Team</a></li>
+        <li><a href="/error/error.html">Fee Dashboard</a></li>
+        <li><a href="/announcement/announcement.html">Announcements</a></li>
+        <li><a href="/error/error.html">My Payments</a></li>
+      </ul>
+    </nav>
+    <a class="cta" href="https://forms.gle/KrgzDjdHDZHw3NRj9">
+      <button>
+        Report an Error
+      </button>
+    </a>
+  </header>
+
+  <div class="body-container">
+
+    <canvas id="myChart" style="width:100%;max-width:600px">
+    </canvas>
+
+    <script>
+      var xValues = ["CHE110", "CSE111", "CSE326", "ECE249", "ECE279", "INT108", "MTH174", "PES318"];
+      var yValues = [73, 82, 93, 76, 86, 77, 83, 88];
+      var barColors = ["green", "yellow", "blue", "red", "black", "cyan", "#90EE90", "grey"];
+
+      new Chart("myChart", {
+        type: "bar",
+        data: {
+          labels: xValues,
+          datasets: [{
+            backgroundColor: barColors,
+            data: yValues
+          }]
+        },
+        options: {
+          legend: { display: false },
+          title: {
+            display: true,
+            text: "Course Attendance Graph"
+          }
+        }
+      });
+    </script>
+
+
+
+    <table class="content-table">
+      <thead>
+        <tr>
+          <th>Course Code</th>
+          <th>Last Class Attended</th>
+          <th>Duty Leave</th>
+          <th>Total Delv(L,T,P)</th>
+          <th>Total Att.(L,T,P)</th>
+          <th>Total Percentage</th>
+      </thead>
+      <tbody>
+
+        </tr>
+        <tr>
+          <td>CHE110 ENVIRONMENTAL STUDIES</td>
+          <td>24-Nov-2022</td>
+          <td>2</td>
+          <td>22</td>
+          <td>14</td>
+          <td>73</td>
+
+        </tr>
+        <tr>
+          <td>CSE111 ORIENTATION TO COMPUTING</td>
+          <td>25-Nov-2022</td>
+          <td>0</td>
+          <td>22</td>
+          <td>18</td>
+          <td>82</td>
+
+        </tr>
+        <tr>
+          <td>CSE326 INTERNET PROGRAMING LABORATORY</td>
+          <td>24-Nov-2022</td>
+          <td>3</td>
+          <td>29</td>
+          <td>24</td>
+          <td>93</td>
+        </tr>
+        <tr>
+          <td>ECE249 BASIC ELECTRICAL AND ELECTRONICS ENGINEERING</td>
+          <td>25-Nov-2022</td>
+          <td>1</td>
+          <td>29</td>
+          <td>21</td>
+          <td>76</td>
+        </tr>
+        <tr>
+          <td>ECE279 BASIC ELECTRICAL AND ELECTRONICS ENGINEERING LABORATORY</td>
+          <td>23-Nov-2022</td>
+          <td>0</td>
+          <td>22</td>
+          <td>19</td>
+          <td>86</td>
+        </tr>
+        <tr>
+          <td>INT108 PYTHON PROGRAMMING</td>
+          <td>24-Nov-2022</td>
+          <td>5</td>
+          <td>44</td>
+          <td>29</td>
+          <td>77</td>
+        </tr>
+        <tr>
+          <td>MTH174 ENGINEERING MATHEMATICS</td>
+          <td>25-Nov-2022</td>
+          <td>5</td>
+          <td>42</td>
+          <td>30</td>
+          <td>83</td>
+        </tr>
+        <tr>
+          <td>PES318 SOFT SKILLS-1</td>
+          <td>25-Nov-2022</td>
+          <td>2</td>
+          <td>34</td>
+          <td>28</td>
+          <td>88</td>
+        </tr>
+        <tr>
+          <td>Aggregate Attendance</td>
+          <td>83% </td>
+          <td>18</td>
+          <td>244</td>
+          <td>183</td>
+          <td>83</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+<script>
+  var loader = document.getElementsByClassName("pre-loader");
+  window.addEventListener('load', function (load) {
+    window.removeEventListener('load', load, false);
+    setTimeout(function () { loader[0].style.display = 'none' }, 600);
+  }, false);
+</script>
+
+</html>

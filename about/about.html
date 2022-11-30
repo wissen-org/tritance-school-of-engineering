@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" type="text/css" href="/about/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="pre-loader">
+        <div id="loader-image-wrapper">
+            <img src="/assets/images/anim/loader2.svg">
+        </div>
+    </div>
+    <header>
+        <img class="logo" src="/assets/images/college.png" alt="logo">
+        <nav>
+            <ul class="nav__links">
+                <li><a href="/dashboard/dashboard.html">Dashboard</a></li>
+                <li><a href="/profile/profile.html">My Profile</a></li>
+                <li><a href="/attendance/attendance.html">My Class Attendance</a></li>
+                <li><a href="/about/about.html">About the Team</a></li>
+                <li><a href="/error/error.html">Fee Dashboard</a></li>
+                <li><a href="/announcement/announcement.html">Announcements</a></li>
+                <li><a href="/error/error.html">My Payments</a></li>
+            </ul>
+        </nav>
+        <a class="cta" href="https://forms.gle/KrgzDjdHDZHw3NRj9">
+            <button>
+                Report an Error
+            </button>
+        </a>
+    </header>
+    <div class="body-container">
+        <p id="title">
+            Our Team
+        </p>
+        <div class="card-container">
+            <div class="card">
+                <img id="yashaswee" src="/assets/images/photos/cards/yashaswee.png">
+                <span>
+                </span>
+                <p id="contrib-name">
+                    Yashaswee<br>Kesharwani
+                </p>
+                <div class="collapsible">
+                    <input type="checkbox" id="collapsible-head-yash">
+                    <label for="collapsible-head-yash">
+                        Here's my bit of a work
+                    </label>
+                    <div class="collapsible-text">
+                        <h2>Alpha</h2>
+                        <p> Being the Team Captain, I was responsible for integrating all my team mates contributions to
+                            a finished product. Furthermore, I designed the Login Page, Announcements Page and the page
+                            you are interacting with right now.
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="card">
+                <img id="anand" src="/assets/images/photos/cards/anand.png">
+                <p id="contrib-name">
+                    Soumya<br>Anand
+                </p>
+                <div class="collapsible">
+                    <input type="checkbox" id="collapsible-head-anand">
+                    <label for="collapsible-head-anand">
+                        See my Contributions
+                    </label>
+                    <div class="collapsible-text">
+                        <h2>Beta</h2>
+                        <p>
+                            I designed the dashboard, error page and integrated google forms to the System, also adding snippets of features to other pages as well.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img id="shanmukha" src="/assets/images/photos/cards/shan.png">
+                <p id="contrib-name">
+                    Shanmukha<br>Siddharth<br>Changalwala
+                </p>
+                <div class="collapsible">
+                    <input type="checkbox" id="collapsible-head-shan">
+                    <label for="collapsible-head-shan">
+                        This is all what I did
+                    </label>
+                    <div class="collapsible-text">
+                        <h2>Gamma</h2>
+                        <p>
+                            I Designed the My Profile Page and My Class Attendance Page
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var loader = document.getElementsByClassName("pre-loader");
+    window.addEventListener('load', function (load) {
+        window.removeEventListener('load', load, false);
+        setTimeout(function () { loader[0].style.display = 'none' }, 600);
+    }, false);
+</script>
+
+</html>

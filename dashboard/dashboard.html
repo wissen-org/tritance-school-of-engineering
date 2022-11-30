@@ -1,0 +1,94 @@
+<!DOCTYPE>
+<html lang="en">
+
+<head>
+    <title>
+        Dashboard
+    </title>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="/dashboard/dashboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="pre-loader">
+        <div id="loader-image-wrapper">
+            <img src="/assets/images/anim/loader2.svg">
+        </div>
+    </div>
+    <header>
+        <img class="logo" src="/assets/images/college.png" alt="logo">
+        <nav>
+            <ul class="nav__links">
+                <li><a href="/dashboard/dashboard.html">Dashboard</a></li>
+                <li><a href="/profile/profile.html">My Profile</a></li>
+                <li><a href="/attendance/attendance.html">My Class Attendance</a></li>
+                <li><a href="/about/about.html">About the Team</a></li>
+                <li><a href="/error/error.html">Fee Dashboard</a></li>
+                <li><a href="/announcement/announcement.html">Announcements</a></li>
+                <li><a href="/error/error.html">My Payments</a></li>
+            </ul>
+        </nav>
+        <a class="cta" href="https://forms.gle/KrgzDjdHDZHw3NRj9">
+            <button>
+                Report an Error
+            </button>
+        </a>
+    </header>
+    <div class="ticker-container">
+        <div class="ticker">
+            <div class="title">
+                <h5>
+                    IMPORTANT NEWS
+                </h5>
+            </div>
+            <div class="news">
+                <marquee>
+                    <p>
+                        University News – A Weekly Journal of Higher Education published by the Association of Indian
+                        Universities is the premier forum for academics, leaders, teachers, policy makers, managers,
+                        administrators and stakeholders interested in different facets of higher education, national and
+                        international. Commenced in 1929, it is now an official organ of the Association. It has carved
+                        a niche for itself as one among the very few journals in regularity of appearance and richness
+                        of contents. It appears with clockwise regularity on every Monday and reaches an extensive
+                        audience. It is indeed an indispensable reading for all those connected with higher education.
+                        The Journal is referred internationally for the happenings in Indian higher education. It
+                        contains a mammoth of information about world higher education in general and Indian higher
+                        education in particular.
+                    </p>
+                </marquee>
+            </div>
+        </div>
+    </div>
+    <div class="body-dash">
+        <div class="profile-card-container">
+            <div class="profile-card">
+                <div class="contentBx">
+                    <div class="content">
+                        <h2>Yashaswee Kesharwani<br>
+                            <span>B.Tech Computer Science and Engineering</span>
+                        </h2>
+                    </div>
+                </div>
+                <div class="toggle">
+                    <span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/dashboard/dashboard.js"></script>
+<script>
+    var loader = document.getElementsByClassName("pre-loader");
+    window.addEventListener('load', function (load) {
+        window.removeEventListener('load', load, false);
+        setTimeout(function () { loader[0].style.display = 'none' }, 600);
+    }, false);
+</script>
+
+</html>

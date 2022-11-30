@@ -1,0 +1,205 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+}
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-family: "Secular One", sans-serif;
+	font-size: 12px;
+}
+
+img {
+	width: 100%;
+}
+
+.body-dash {
+	background-color: black;
+}
+
+li,
+a,
+button {
+	font-family: "Secular One", sans-serif;
+	font-weight: 500;
+	font-size: 12px;
+	color: white;
+	text-decoration: none;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 30px 10px;
+	background-color: #24252a;
+}
+
+.logo {
+	cursor: pointer;
+	width: 40px;
+	height: 40px;
+	order: 3;
+	margin: auto;
+}
+
+nav {
+	order: 1;
+}
+
+.nav__links {
+	list-style: none;
+}
+
+.nav__links li {
+	display: inline-block;
+	padding: 0px 20px;
+}
+
+.nav__links li a {
+	transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+	color: rgba(0, 136, 169, 1);
+}
+
+button {
+	margin-left: 20px;
+	padding: 9px 20px;
+	background-color: rgba(0, 136, 169, 1);
+	border: none;
+	border-radius: 54px;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+}
+
+button:hover {
+	background-color: red;
+	color: white;
+}
+
+.pre-loader {
+	display: flex;
+	background: #1b1b1e;
+	height: 100vh;
+	width: 100%;
+	position: fixed;
+	z-index: 100;
+	justify-content: center;
+	align-items: center;
+}
+
+.body-container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #330000;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 400'%3E%3Cdefs%3E%3CradialGradient id='a' cx='396' cy='281' r='514' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23D18'/%3E%3Cstop offset='1' stop-color='%23330000'/%3E%3C/radialGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='400' y1='148' x2='400' y2='333'%3E%3Cstop offset='0' stop-color='%23FA3' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23FA3' stop-opacity='0.5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='800' height='400'/%3E%3Cg fill-opacity='0.4'%3E%3Ccircle fill='url(%23b)' cx='267.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='532.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='400' cy='30' r='300'/%3E%3C/g%3E%3C/svg%3E");
+	background-attachment: fixed;
+	background-size: cover;
+	padding: 0 1.5rem;
+	flex-direction: column;
+}
+
+.ann-post {
+	width: 100%;
+	max-width: 65rem;
+	padding: 1rem;
+	background-color: #fff;
+	box-shadow: 0 1.4rem 8rem rgba(0, 0, 0, 0.2);
+	display: flex;
+	align-items: center;
+	border-radius: 0.8rem;
+	margin: 20px;
+}
+
+.ann-post__img {
+	min-width: 25rem;
+	max-width: 25rem;
+	height: 15rem;
+	transform: translateX(-4rem);
+	position: relative;
+}
+
+.ann-post__img img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+	border-radius: 0.8rem;
+}
+
+.ann-post__img::before {
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: linear-gradient(
+		to right,
+		rgba(79, 172, 254, 0.4),
+		rgba(0, 242, 254, 0.4)
+	);
+	box-shadow: 0.5rem 0.5rem 3rem 1px rgba(0, 0, 0, 0.05);
+	border-radius: 0.8rem;
+}
+
+.ann-post__date span {
+	display: block;
+	color: rgba(0, 0, 0, 0.9);
+	font-size: 1.2rem;
+	font-weight: 600;
+	margin: 0.5rem 0;
+}
+
+.ann-post__title {
+	font-size: 2.5rem;
+	margin: 0.1rem 0 0.1rem;
+	text-transform: uppercase;
+	color: rgba(0, 136, 169, 1);
+}
+
+.ann-post__text {
+	margin-bottom: 1rem;
+	font-size: 1rem;
+	color: rgba(0, 0, 0, 0.7);
+	text-align: justify;
+}
+
+.ann-post__cta {
+	display: inline-block;
+	padding: 0.5rem 1rem;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	font-size: 1rem;
+	color: #fff;
+	background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    border: 2px solid white;
+	border-radius: 8rem;
+}
+
+.ann-post__cta:hover {
+	background-image: linear-gradient(to right, #00f2fe 0%, #4facfe 100%);
+    border-color: #1b1b1e;
+}
+::-webkit-scrollbar {
+	width: 12px;
+}
+::-webkit-scrollbar-thumb {
+	background: linear-gradient(transparent, #DD1188);
+	border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+	background: linear-gradient(transparent, #24252A);
+}

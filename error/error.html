@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error</title>
+    <link rel="stylesheet" type="text/css" href="/error/error.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="pre-loader">
+        <div id="loader-image-wrapper">
+            <img src="/assets/images/anim/loader2.svg">
+        </div>
+    </div>
+    <div class="error-wrapper">
+        <!-- <img id="err" src="/assets/images/photos/error.png"> -->
+        <div class="error-container">
+            <img id="warning" src="/assets/images/icons/warning.svg">
+            <p id="code">
+                Error 404
+            </p>
+            <p id="code-text">
+                Oops! You weren't supposed to see this<br>
+                The page you're looking for no longer exists.<br>
+                Return to the home page and remember:<br>
+                [ you haven't seen anything ]<br>
+            </p>
+            <a href="/index.html">
+                <span>
+                    home
+                </span>
+            </a>
+        </div>
+
+    </div>
+</body>
+<script>
+    var loader = document.getElementsByClassName("pre-loader");
+    window.addEventListener('load', function (load) {
+      window.removeEventListener('load', load, false);
+      setTimeout(function () { loader[0].style.display = 'none' }, 1500);
+    }, false);
+  </script>
+</html>

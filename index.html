@@ -1,0 +1,81 @@
+<!DOCTYPE>
+<html lang="en">
+
+<head>
+    <title>
+        Tritance School of Engineering
+    </title>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="/authentication/auth.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="pre-loader">
+        <div id="loader-image-wrapper">
+            <img src="assets/images/anim/loader2.svg">
+        </div>
+    </div>
+    <div class="header">
+        <img id="college-logo-img" src="assets/images/college.png" alt="College Logo">
+        <h1>
+            Tritance School of Engineering
+        </h1>
+    </div>
+    <div class="title_block">
+        <p id="title">
+            University Management System
+        </p>
+    </div>
+    <div class="body-container">
+        <div class="login-form-container" data-tilt>
+            <div class="username-container">
+                <div id="label-line">
+                    <img id="icon" src="assets/images/icons/user.png">
+                    <label for="userId">E-MAIL
+                    </label><br>
+                </div>
+                <input type="text" id="userId" name="userId" placeholder="Your Tritance address here...">
+            </div>
+            <div class="password-container">
+                <div id="label-line">
+                    <img id="icon" src="assets/images/icons/lock.png">
+                    <label for="password">
+                        PASSWORD
+                    </label><br>
+                </div>
+                <input type="password" id="password" name="password" placeholder="Enter Password here...">
+            </div>
+
+            <div class="login-button">
+                <input id="login" type="submit" value="↵" onclick="login()">
+            </div>
+        </div>
+
+    </div>
+    <script>
+        document.addEventListener("keydown",function(){
+            var x=event.keyCode || event.which;
+            if(x==13){
+                login()
+            }
+        })
+    </script>
+</body>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+<script src="/authentication/auth.js"></script>
+<script>
+    var loader = document.getElementsByClassName("pre-loader");
+    window.addEventListener('load', function (load) {
+        window.removeEventListener('load', load, false);
+        setTimeout(function () { loader[0].style.display = 'none' }, 600);
+    }, false);
+</script>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Profile</title>
+  <link rel="stylesheet" href="/profile/profile.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="pre-loader">
+    <div id="loader-image-wrapper">
+      <img src="/assets/images/anim/loader2.svg">
+    </div>
+  </div>
+  <header>
+    <img class="logo" src="/assets/images/college.png" alt="logo">
+    <nav>
+      <ul class="nav__links">
+        <li><a href="/dashboard/dashboard.html">Dashboard</a></li>
+        <li><a href="/profile/profile.html">My Profile</a></li>
+        <li><a href="/attendance/attendance.html">My Class Attendance</a></li>
+        <li><a href="/about/about.html">About the Team</a></li>
+        <li><a href="/error/error.html">Fee Dashboard</a></li>
+        <li><a href="/announcement/announcement.html">Announcements</a></li>
+        <li><a href="/error/error.html">My Payments</a></li>
+      </ul>
+    </nav>
+    <a class="cta" href="https://forms.gle/KrgzDjdHDZHw3NRj9">
+      <button>
+        Report an Error
+      </button>
+    </a>
+  </header>
+  <div class="body-container">
+    <table class="content-table">
+      <tr>
+        <th>Personal Information: </th>
+      </tr>
+      <tr>
+        <td>Prov. Regd. # :</td>
+        <td>1234567</td>
+        <td>Date of birth:</td>
+        <td>20-18-2022</td>
+      </tr>
+      <tr>
+        <td>Name :</td>
+        <td>liben</td>
+        <td>Category:</td>
+        <td>Gen</td>
+      </tr>
+      <tr>
+        <td>Father Name :</td>
+        <td>Francis</td>
+        <td>Father's Mobile No: </td>
+        <td>9123534256</td>
+      </tr>
+      <tr>
+        <td>Mother Name :</td>
+        <td>Roland </td>
+        <td>Mother's Mobile No:</td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td>Gender :</td>
+        <td>M</td>
+        <td>Landline No:</td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td>Student Mobile :</td>
+        <td>2325487659</td>
+        <td>E-mail Id:</td>
+        <td>liben@idonthaveacomputer.com</td>
+      </tr>
+      <tr>
+        <td>Emergency Contact No :</td>
+        <td> </td>
+        <td>Father's E-mail Id:</td>
+        <td>abc@gmail.com
+      </tr>
+      <tr>
+        <td>LPU Email Id :</td>
+        <td>liben@lpu.in</td>
+      </tr>
+
+
+    </table>
+  </div>
+</body>
+<script>
+  var loader = document.getElementsByClassName("pre-loader");
+  window.addEventListener('load', function (load) {
+    window.removeEventListener('load', load, false);
+    setTimeout(function () { loader[0].style.display = 'none' }, 600);
+  }, false);
+</script>
+
+</html>
